@@ -1,5 +1,6 @@
 package com.go.spring.springselenium;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,12 +9,28 @@ public class User {
 	private Address address;
 	private Salary salary;
 	
+
+    @Autowired
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+    @Autowired
+	public void setSalary(Salary salary) {
+		this.salary = salary;
+	}
+
+
+
 	
-	public User(Address address, Salary salary) {
+	
+	/*public User(Address address, Salary salary) {
 		super();
 		this.address = address;
 		this.salary = salary;
-	}
+	}*/
+	
+	
 	
 	 public void printDetails() {
 	      System.out.println("Address : " + this.address.getStreet());
