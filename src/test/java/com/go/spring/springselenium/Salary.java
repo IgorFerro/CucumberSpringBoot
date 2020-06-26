@@ -1,5 +1,8 @@
 package com.go.spring.springselenium;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Salary {
 	
 	private int amount;
