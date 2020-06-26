@@ -6,10 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 	
+	@Autowired
 	private Address address;
+	@Autowired
 	private Salary salary;
 	
 
+	/*
     @Autowired
 	public void setAddress(Address address) {
 		this.address = address;
@@ -18,12 +21,8 @@ public class User {
     @Autowired
 	public void setSalary(Salary salary) {
 		this.salary = salary;
-	}
+	}*/
 
-
-
-	
-	
 	/*public User(Address address, Salary salary) {
 		super();
 		this.address = address;
