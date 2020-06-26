@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.github.javafaker.Faker;
+
 @SpringBootTest
 class SpringSeleniumApplicationTests {
 
@@ -18,9 +20,13 @@ class SpringSeleniumApplicationTests {
 	@Autowired
 	private User user;
 	
+	@Autowired Faker faker;
+	
 	@Test
 	void contextLoads() {
-		user.printDetails();
+		//user.printDetails();
+		//Faker faker = new Faker();
+		System.out.println(faker.name().firstName());
 	}
 
 }
