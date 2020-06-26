@@ -17,16 +17,20 @@ class SpringSeleniumApplicationTests {
 	    user.printDetails();
 	}*/
 	
-	@Autowired
+	/*@Autowired
 	private User user;
 	
-	@Autowired Faker faker;
+	@Autowired Faker faker;*/
+	
+	@Autowired
+	private Television tv;
 	
 	@Test
 	void contextLoads() {
 		//user.printDetails();
 		//Faker faker = new Faker();
-		System.out.println(faker.name().firstName());
+		//System.out.println(faker.name().firstName());
+		this.tv.playMovie();
 	}
 
 }
