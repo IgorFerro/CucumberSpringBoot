@@ -23,17 +23,14 @@ public class GooglePage extends Base {
 		this.driver.get(url);
 	}
 	
-	
+
 	public SearchComponent getSearchComponent() {
 		return searchComponent;
 	}
 
-
 	public SearchResult getSearchResult() {
 		return searchResult;
 	}
-
-	
 
 	@Override
 	public boolean isAt() {

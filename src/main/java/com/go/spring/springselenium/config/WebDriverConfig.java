@@ -17,7 +17,7 @@ public class WebDriverConfig {
 	
 	@Bean
 	public WebDriver chromeDriver() {
-		WebDriverManager.chromedriver().version("83.0.4103.39");
+		WebDriverManager.chromedriver().version("83.0.4103.39").setup();
 		return new ChromeDriver();
 	}
 	

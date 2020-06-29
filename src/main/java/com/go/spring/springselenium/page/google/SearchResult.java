@@ -22,7 +22,7 @@ public class SearchResult extends Base {
 
 	@Override
 	public boolean isAt() {
-		return false;
+		return true;
 		//return this.wait.until((d)-> this.results.isEmpty());
 	}
 

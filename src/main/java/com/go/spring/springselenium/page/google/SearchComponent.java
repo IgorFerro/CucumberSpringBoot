@@ -30,7 +30,7 @@ public class SearchComponent extends Base {
 
 	@Override
 	public boolean isAt() {
-		return false;
+		return true;
 		//return this.wait.until((d)->this.searchBox.isDisplayed());
 	}
 
