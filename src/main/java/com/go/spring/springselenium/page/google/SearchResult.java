@@ -13,7 +13,7 @@ import com.go.spring.springselenium.page.Base;
 public class SearchResult extends Base {
 	
 	@FindBy(css = "div.rc")
-	private List<WebElement> results;
+	private List<WebElement>results;
 	
 	
 	public int getCount(){
@@ -22,7 +22,8 @@ public class SearchResult extends Base {
 
 	@Override
 	public boolean isAt() {
-		return this.wait.until((d) -> !this.results.isEmpty());
+		return false;
+		//return this.wait.until((d)-> this.results.isEmpty());
 	}
 
 }
