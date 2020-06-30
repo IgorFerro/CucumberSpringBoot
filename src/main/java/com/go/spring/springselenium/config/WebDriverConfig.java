@@ -8,15 +8,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+@Lazy
 @Configuration
+@Profile("remote")
 public class WebDriverConfig {
 	
-	@Value("${default.timeout:30}")
-	private int timeout;
+	
 	
 	@Bean
 	@ConditionalOnProperty(name="browser",havingValue = "chrome")
@@ -32,10 +35,6 @@ public class WebDriverConfig {
 		return new FirefoxDriver();
 	}
 	
-	@Bean
-	public WebDriverWait webdriverWait(WebDriver driver) {
-		return new WebDriverWait(driver, this.timeout);
-	}
 	
 	
 
