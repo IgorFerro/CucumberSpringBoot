@@ -26,7 +26,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
 		this.googlePage.goTo();
 		Assert.assertTrue(this.googlePage.isAt());
 		
-		Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
+		//Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 		
 		this.googlePage.getSearchComponent().search("environment");
 		Assert.assertTrue(this.googlePage.getSearchResult().isAt());
