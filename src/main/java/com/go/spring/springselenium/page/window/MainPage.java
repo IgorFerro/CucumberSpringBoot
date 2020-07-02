@@ -24,7 +24,6 @@ import com.go.spring.springselenium.page.Base;
 	}
 	  
 	  
-
 	@Override
 	public boolean isAt() {
 		//return this.wait.until((d)-> !this.links.isEmpty());
