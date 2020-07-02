@@ -4,9 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.go.spring.springselenium.SpringBaseTestNGTest;
 import com.go.spring.springselenium.page.flights.FlightPage;
 
-public class FlightTest {
+public class FlightTest extends SpringBaseTestNGTest {
 
 	@Autowired
 	private FlightPage flightPage;
