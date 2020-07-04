@@ -1,5 +1,6 @@
 package com.go.spring.springselenium;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,7 +23,8 @@ public class UserVisaTest extends SpringBaseTestNGTest {
 	public void visaTest() {
 		//System.out.println(this.repository.findAll().size());
 		//List<User> users = this.repository.findAll()
-		List<User> users = this.repository.findByFirstNameStartingWith("Bran");
+		//List<User> users = this.repository.findByFirstNameStartingWith("Bran")
+		List<User> users = this.repository.findByDobBetween(Date.valueOf("1995-01-01"), Date.valueOf("1998-01-01"))
 				.stream()
 				.limit(3)
 				.collect(Collectors.toList());
