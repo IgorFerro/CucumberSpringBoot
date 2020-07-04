@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.go.spring.springselenium.page.Base;
 
@@ -20,6 +21,7 @@ import com.go.spring.springselenium.page.Base;
 	public void launchAllWindows() {
 		for (int i =0; i<links.size(); i++) {
 			links.get(i).click();
+			//this.wait.until(ExpectedConditions.numberOfWindowsToBe(i+2));
 		}
 	}
 	  
