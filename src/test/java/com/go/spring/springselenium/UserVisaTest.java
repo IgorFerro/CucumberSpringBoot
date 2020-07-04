@@ -21,7 +21,8 @@ public class UserVisaTest extends SpringBaseTestNGTest {
 	@Test
 	public void visaTest() {
 		//System.out.println(this.repository.findAll().size());
-		List<User> users = this.repository.findAll()
+		//List<User> users = this.repository.findAll()
+		List<User> users = this.repository.findByFirstNameStartingWith("Bran");
 				.stream()
 				.limit(3)
 				.collect(Collectors.toList());
