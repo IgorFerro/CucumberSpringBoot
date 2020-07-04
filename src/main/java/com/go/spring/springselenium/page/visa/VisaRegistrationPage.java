@@ -1,6 +1,7 @@
 package com.go.spring.springselenium.page.visa;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -72,7 +73,7 @@ public class VisaRegistrationPage extends Base {
 	}
 	
 	public void setComments(String comments) {
-		this.comments.sendKeys(comments);
+		this.comments.sendKeys(Objects.toString(comments,""));
 	}
 	
 	public void submit() {
